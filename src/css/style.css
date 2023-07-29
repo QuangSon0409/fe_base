@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins" sans-serif;
+  border: none;
+  outline: none;
+}
+body {
+  background: linear-gradient(
+    to bottom left,
+    #ff63d1,
+    #6481ff,
+    #5efff5,
+    #58fe52,
+    #9198e5,
+    #ffd234
+  );
+  min-height: 100vh;
+}
+.container,
+.container-detail {
+  margin: 0 auto;
+  width: 1024px;
+}
+.title {
+  text-align: center;
+  margin: 1rem 0;
+}
+.title img {
+  width: 50%;
+  height: 200px;
+}
+
+.search_form input {
+  background-color: transparent;
+  border-bottom: 2px solid #110f29;
+  width: 300px;
+  padding: 0.5rem 0;
+  margin: 0 3rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+.search_form input:focus {
+  border-bottom-color: #6481ff;
+}
+.search_form button {
+  margin-top: 1rem;
+  background-color: #6481ff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.search_form button:hover {
+  background-color: #58fe52;
+}
+.products {
+  display: grid;
+  grid-template-columns: 32.67% 32.67% 32.67%;
+  grid-gap: 20px;
+}
+.product {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+.product .product-title {
+  color: aliceblue;
+  font-size: 20px;
+  margin-right: 2rem;
+  font-weight: bold;
+}
+.product .product-image img {
+  width: 80%;
+}
+
+.product .btn-product a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.product .btn-product {
+  background-color: #ffd234;
+  opacity: 0;
+  transform: translateY(100px);
+  position: absolute;
+  top: 40%;
+  left: 28%;
+  transition: 0.4s ease;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.product:hover .btn-product {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*product-detail*/
+.back-home svg {
+  font-size: 30px;
+}
+.product_detail {
+  display: grid;
+  grid-template-columns: 35% 60%;
+  grid-gap: 20px;
+}
+.product_detail .product_detail-image img {
+  width: 100%;
+}
+.product_detail-description {
+  margin-top: -40px;
+}
+.product_detail-description #title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.product_detail-description .detail-title,
+.product_detail-description .detail-level {
+  margin: 1rem 0.5rem;
+  padding: 1rem 0.5rem;
+}
+.product_detail-description .detail-description {
+  margin-left: 1rem;
+}
+.detail-description,
+.detail-level,
+.detail-title span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2;
+}
