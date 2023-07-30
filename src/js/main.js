@@ -1,4 +1,4 @@
-const api = "http://localhost:8080/api/pokemons";
+const api = "http://27.118.27.183/api/pokemons";
 
 async function fetchData() {
   try {
@@ -48,7 +48,7 @@ if (document.querySelector(".search_form-button")) {
       e.preventDefault();
       const pokemonName = document.querySelector(".search_form-input").value;
       console.log(pokemonName);
-      fetch(`http://localhost:8080/api/pokemons?_keyword=${pokemonName}`)
+      fetch(`http://27.118.27.183/api/pokemons?_keyword=${pokemonName}`)
         .then((response) => response.json())
         .then(({ data }) => {
           document.querySelector(".products").innerHTML = showProduct(data);
@@ -59,7 +59,7 @@ let id = new URLSearchParams(window.location.search).get("id");
 if (id) {
   const fetchDataByid = () => {
     try {
-      fetch(`http://localhost:8080/api/pokemons/${id}`, {
+      fetch(`http://27.118.27.183/api/pokemons/${id}`, {
         method: "GET",
         headers: {
           "content-type": "application/json",
